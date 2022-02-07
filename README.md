@@ -1,4 +1,4 @@
-# fintraxy-backend
+# fastapy-server-template
 
 # How to
 ```
