@@ -1,0 +1,13 @@
+from typing import Optional
+from fastapi import APIRouter
+from utils.responsify import Responsify
+
+router = APIRouter()
+
+@router.get("/example")
+def get_example():
+    return Responsify.success({ "message": "Example" })
+
+@router.get("/items/{item_id}")
+def read_item(item_id: int, q: Optional[str] = None):
+    return Responsify.success({"item_id": item_id, "q": q})
